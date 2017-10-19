@@ -5,6 +5,7 @@ const { authenticator } = require('../auth');
 
 router.use(bodyParser.json());
 
+// router.get('/', (req, res) => {
 router.get('/', authenticator, (req, res) => {
   let sessionInfo;
   let allTimeTotals;
@@ -132,14 +133,6 @@ router.get('/', authenticator, (req, res) => {
 
 // Create a new session in DB 
 router.post('/', authenticator, (req, res) => {
-  // const requiredFields = ['name', 'work_duration', 'break_duration', 'is_completed'];
-  // const missingIndex = requiredFields.findIndex(field => !req.body[field]);
-  // if (missingIndex !== -1) {
-  //   return res.status(400).json({
-  //     message: `Missing field: ${requiredFields[missingIndex]}`
-  //   });
-  // }
-
   let { 
     name, 
     work_duration, 

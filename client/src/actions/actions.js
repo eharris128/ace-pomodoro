@@ -120,6 +120,7 @@ export const fetchSessions = (username, password) => dispatch => {
       return res.json();
     })
     .then(sessions => {
+      console.log('Sessions in action: ', sessions);
       return dispatch(getSessionsSuccess(sessions));
     })
     .catch(err => {
@@ -164,10 +165,10 @@ export const sendSessionDuration = (sessionDuration, sessionName, breakDurationS
     work_duration: workDurationSetting,
     break_duration: breakDurationSetting,
     total_work_time: sessionDuration,
-    // total_break_time: breakDuration,
     is_completed: true
   };
 
+  console.log('The stuff we send to backend: ', formattedPostRequest);
   const opts = {
     headers: {
       Accept: 'application/json',
@@ -198,7 +199,6 @@ export const sendBreakDuration = (breakDuration, sessionName) => {
     name: sessionName,
     total_break_time: breakDuration,
   };
-  console.log('Break duration: ' + formattedPostRequest.total_break_time);
   const opts = {
     headers: {
       Accept: 'application/json',

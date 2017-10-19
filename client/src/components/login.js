@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { loginUserRequest, updateCredentials } from '../actions/actions';
+import { loginUserRequest, updateCredentials, fetchSessions } from '../actions/actions';
 
 import './styles/login.css';
 
@@ -26,9 +26,24 @@ export class LogIn extends React.Component {
     this.props.dispatch(loginUserRequest());
   }
 
+  demoLogin() {
+    if ((this.props.seconds !== 0 && this.props.minutes !== 0) || this.props.seconds !== 0) {
+      this.props.history.push('/work-timer');
+    } else if (this.props.seconds === 0 && this.props.minutes === 0) {
+      this.props.history.push('/set-pomo');
+    }
+    let username = this.props.username ? this.props.username : 'username';
+    let password =  this.props.password ? this.props.password : 'password';
+    const credentials = `${username}:${password}`;
+    const encodedAuthHeader = btoa(credentials);
+    window.encodedAuthHeader = encodedAuthHeader;
+    this.props.dispatch(updateCredentials(username, password));
+  }
+
   render() {
     return (
       <div className="login">
+        <button onClick={() => this.demoLogin()}>Demo</button>
         <h2>Login</h2>
         <form className="login-form" onSubmit={e => this.loginSubmit(e)}>
           <input
@@ -61,6 +76,21 @@ export class LogIn extends React.Component {
 
 const mapStateToProps = state => ({
   minutes: state.sessionMinutesRemaining,
-  seconds: state.sessionSecondsRemaining
+  seconds: state.sessionSecondsRemaining,
+  username: state.username,
+  password: state.password
 });
+
 export default connect(mapStateToProps)(LogIn);
+
+
+
+// const mapStateToProps = state => ({
+//   sessions: state.sessions,
+//   loading: state.loading,
+//   error: state.error,
+//   username: state.username,
+//   password: state.password
+// });
+
+// export default connect(mapStateToProps)(UserData);

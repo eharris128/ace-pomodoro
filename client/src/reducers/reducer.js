@@ -29,8 +29,6 @@ import {
 
 const initialState = {
   username: "",
-  // user: '',
-  // loggedIn: true,
   loggedIn: false,
   sessions: [],
   display: "login",
@@ -49,7 +47,7 @@ const initialState = {
   breakId: null,
   paused: false
 };
-//d
+
 export default (state, action) => {
   state = state || initialState;
 
@@ -84,18 +82,15 @@ export default (state, action) => {
       loggedIn: true
     })
   } else if (action.type === CREATE_USER_REQUEST) {
-    console.log("create user request");
     return {
       ...state
     };
   } else if (action.type === VIEW_USER_DATA) {
-    console.log("checking user data");
     return {
       ...state,
       display: "userData"
     };
   } else if (action.type === SUBMIT_POMODORO) {
-    console.log("submitted pomodoro");
     return {
       ...state,
       display: "workPomo"
@@ -107,13 +102,11 @@ export default (state, action) => {
       sessionSecondsRemaining: action.secondsRemaining
     };
   } else if (action.type === SHOW_POMO_INFO) {
-    console.log("pomoInfo");
     return {
       ...state,
       display: "pomoInfo"
     };
   } else if (action.type === SHOW_BREAK_TIMER) {
-    console.log("break timer clicked");
     return {
       ...state,
       display: "breakTimer"

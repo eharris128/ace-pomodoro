@@ -22,6 +22,8 @@ router.use(bodyParser.json());
 //   return res.status(200).json({ name: 'bobby' });
 // });
 // Create a new user in DB
+// test User:
+
 router.post('/', (req, res) => {
   const requiredFields = ['username', 'password'];
   const missingIndex = requiredFields.findIndex(field => !req.body[field]);
