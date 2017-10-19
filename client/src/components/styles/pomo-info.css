@@ -4,9 +4,22 @@
   box-sizing: border-box;
   width: 60%;
   margin: 0px auto;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .pomo-info > h2, em {
   color: #4D693F;
+  font-size: 1.7rem;
+}
+
+.info {
+  text-align: left;
+  max-width: 70ch;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .pomo-info {
+    width: 40%
+  }
 }

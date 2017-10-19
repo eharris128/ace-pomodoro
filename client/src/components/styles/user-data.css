@@ -5,26 +5,36 @@
 }
 
 table {
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 80%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 80%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    width: 20%;
+ th {
+    font-size: 1.3rem;
+} 
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 20%;
 }
 
 thead {
-    background-color: #E5E4E2;
+  background-color: #e5e4e2;
 }
 
 tbody:nth-child(odd) {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
 
 .session-result a {
-    color: blue;
+  color: blue;
+}
+
+@media (min-width: 768px) {
+  .session-result {
+    width: 40%;
+  }
 }

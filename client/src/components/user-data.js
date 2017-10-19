@@ -52,9 +52,9 @@ export class UserData extends React.Component {
             <table className="session-result">
               <thead>
                 <tr>
-                  <th>saved sessions</th>
-                  <th>set work time</th>
-                  <th>set break time</th>
+                  <th>Saved sessions</th>
+                  <th>Set work time</th>
+                  <th>Set break time</th>
                 </tr>
               </thead>
               <tbody>

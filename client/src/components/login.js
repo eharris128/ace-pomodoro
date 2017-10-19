@@ -43,7 +43,7 @@ export class LogIn extends React.Component {
   render() {
     return (
       <div className="login">
-        <button onClick={() => this.demoLogin()}>Demo</button>
+        <button className="login-button" onClick={() => this.demoLogin()}>Demo</button>
         <h2>Login</h2>
         <form className="login-form" onSubmit={e => this.loginSubmit(e)}>
           <input
@@ -64,10 +64,10 @@ export class LogIn extends React.Component {
             required
             ref={input => (this.password = input)}
           />
-          <button type="submit" className="login-button">login</button>
+          <button type="submit" className="login-button">Login</button>
         </form>
         <span className="create-account-span">
-          <Link to="/create-user" className="create-account-link">create user</Link>
+          <button className="login-button"> <Link to="/create-user">Create user</Link></button>
         </span>
       </div>
     );
@@ -82,15 +82,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(LogIn);
-
-
-
-// const mapStateToProps = state => ({
-//   sessions: state.sessions,
-//   loading: state.loading,
-//   error: state.error,
-//   username: state.username,
-//   password: state.password
-// });
-
-// export default connect(mapStateToProps)(UserData);

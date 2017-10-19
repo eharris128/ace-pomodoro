@@ -1,40 +1,63 @@
-/*header  */
+.min-header {
+  width: 60%;
+}
+
 .header {
-  background-color: #DC381F;
-  margin-bottom: 20px; 
+  background-color: #dc381f;
+  width: 100%;
+  margin: 0 0 1.2rem;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-  margin: 20px;
-  text-align: center;
+  margin: 1rem 0 1rem 0;
+  float: middle;
 }
 
-h1, .nav-span, .users-span {
+h1,
+.nav-span,
+.users-span {
   display: inline-block;
 }
 
-h1:hover, .nav-span:hover, .users-span:hover {
+h1:hover,
+.nav-span:hover,
+.users-span:hover {
   text-decoration: underline;
 }
 
 a {
-   color: white; 
+  color: white;
   text-decoration: none;
 }
 
 /*span elements*/
-
+.nav-span, .users-span {
+  margin-top: 0.3rem;
+}
 .nav-span {
   float: right;
 }
 
 .users-span {
   float: left;
+  width: 12.5rem; 
 }
 
 /*button */
 .logout-button {
+  background-color: green;
   margin: 5px;
-  font-size: 10px;
-  border-radius: 3px;
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 30px;
+}
+
+@media(min-width:768px) {
+  h1 {
+      padding-right: 6rem;
+  }
 }

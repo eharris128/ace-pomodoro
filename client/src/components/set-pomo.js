@@ -167,15 +167,15 @@ export class SetPomo extends React.Component {
             Start Timer!
             </button>
           : <div className="pomo-form">
-              <p>
+              <h3>
                 <em>Set pomodoro work and break durations (minutes).</em>
-              </p>
-              <p>
+              </h3>
+              <h3>
                 <em>
                   Label your pomodoro sessions to track your progress towards
                   your goals over time.
                 </em>
-              </p>
+              </h3>
               <form className="submit-pomo-form" onSubmit={e => this.submitPomoForm(e)}>
                 <label htmlFor="sessionDuration"> Work duration: </label>
                 <input
