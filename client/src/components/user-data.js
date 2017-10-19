@@ -29,7 +29,7 @@ export class UserData extends React.Component {
 
     if (this.props.sessions.sessionInfo) {
       const sessionData = this.props.sessions.sessionInfo.map((item, index) =>
-        <tr>
+        <tr key={index}>
           <th>
             <Link to={`/set-pomo/${item.name}`}>
               {item.name}
