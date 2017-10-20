@@ -2,24 +2,23 @@ fieldset {
   border: 0 none;
 }
 
-form {
-  width: 200px;
-}
-
 span {
   font-size: 18px;
   font-weight: bold;
 }
 
 form {
+  text-align: left;
   margin: auto;
   border-radius: 25px;
   font-size: 1.3rem;
   padding-top: 10px;
+    width: 200px;
 }
 
 input {
   font-size: 18px;
+  width: 8rem;
 }
 
 .clock {

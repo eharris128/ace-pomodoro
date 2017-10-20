@@ -36,11 +36,11 @@ export class UserData extends React.Component {
             </Link>
           </th>
           <th>
-            {item.work_duration.minutes} minutes, {item.work_duration.seconds}{' '}
+            {item.work_duration.minutes} minutes, {item.work_duration.seconds ? item.work_duration.seconds : 0}{' '}
             seconds
           </th>
           <th>
-            {item.break_duration.minutes} minutes, {item.break_duration.seconds}{' '}
+            {item.break_duration.minutes} minutes, {item.break_duration.seconds ? item.break_duration.seconds : 0}{' '}
             seconds
           </th>
         </tr>
