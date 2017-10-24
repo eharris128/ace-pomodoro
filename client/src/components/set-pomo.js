@@ -197,7 +197,7 @@ export class SetPomo extends React.Component {
                   ref={input => (this.breakDuration = input)}
                   defaultValue={this.props.breakTime}
                 />
-                <label htmlFor="sessionName">Session Name: </label>
+                <label htmlFor="sessionName">Session name: </label>
                 <input
                   aria-label="Pomodoro session name"
                   type="text"
