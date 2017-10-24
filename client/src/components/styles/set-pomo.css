@@ -2,7 +2,6 @@
   border: 1px solid black;
   background-color: white;
   box-sizing: border-box;
-  width: 50rem;
   margin: 0px auto;
   padding: 20px;
 }
@@ -23,6 +22,11 @@
 #sessionDuration, #breakDuration, #sessionName {
   padding: 5px;
   margin: 10px;
-  /* margin-left: -1rem; */
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .set-pomo {
+    width: 50rem;
+  }
 }

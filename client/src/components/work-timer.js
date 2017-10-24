@@ -48,7 +48,7 @@ export class WorkTimer extends React.Component {
     const breakIntervalId = setInterval(
       function() {
         // For live version: we want the condition set to 0
-        if (Math.abs(duration) === 55000) {
+        if (Math.abs(duration) === 0) {
           let elapsedTime = moment
             .utc(Math.abs(diffTime) - Math.abs(duration))
             .format("HH:mm:ss");

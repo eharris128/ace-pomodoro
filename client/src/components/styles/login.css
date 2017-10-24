@@ -2,29 +2,33 @@
   background-color: white;
   border: 1px solid black;
   box-sizing: border-box;
-  width: 30rem;
-  margin: 0px auto;
+  margin: 0px 2rem 0 2rem;
   padding: 20px;
-  
 }
 
 .login-form {
   text-align: center;
 }
 .login > h2 {
-  color: #4D693F;
+  color: #4d693f;
 }
 
 .input-login {
-    padding: 10px;
-    margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
-
 .login-button {
-    background-color: green;
-    border: 1px solid;
-    border-radius: 5px;
-    color: white;
-    padding: 5px 30px;
+  background-color: green;
+  border: 1px solid;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 30px;
+}
+
+@media (min-width: 768px) {
+  .login {
+    width: 30rem;
+      margin: 0px auto;
+  }
 }

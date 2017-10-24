@@ -120,7 +120,6 @@ export const fetchSessions = (username, password) => dispatch => {
       return res.json();
     })
     .then(sessions => {
-      console.log('Sessions in action: ', sessions);
       return dispatch(getSessionsSuccess(sessions));
     })
     .catch(err => {

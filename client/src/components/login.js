@@ -32,8 +32,8 @@ export class LogIn extends React.Component {
     } else if (this.props.seconds === 0 && this.props.minutes === 0) {
       this.props.history.push('/set-pomo');
     }
-    let username = this.props.username ? this.props.username : 'username';
-    let password =  this.props.password ? this.props.password : 'password';
+    let username = this.props.username ? this.props.username : 'username1';
+    let password =  this.props.password ? this.props.password : 'password1';
     const credentials = `${username}:${password}`;
     const encodedAuthHeader = btoa(credentials);
     window.encodedAuthHeader = encodedAuthHeader;
@@ -43,8 +43,9 @@ export class LogIn extends React.Component {
   render() {
     return (
       <div className="login">
-        <button className="login-button" onClick={() => this.demoLogin()}>Demo</button>
-        <h2>Login</h2>
+         <p className="info">Click demo to start using pomodoro session to track your workflows. Click on Pomo-Info to learn more about Pomodoro sessions.</p>
+         <button className="login-button" onClick={() => this.demoLogin()}>Demo</button>
+        { /*<h2>Login</h2>
         <form className="login-form" onSubmit={e => this.loginSubmit(e)}>
           <input
             aria-label="username"
@@ -68,7 +69,7 @@ export class LogIn extends React.Component {
         </form>
         <span className="create-account-span">
           <button className="login-button"> <Link to="/create-user">Create user</Link></button>
-        </span>
+        </span> */}
       </div>
     );
   }

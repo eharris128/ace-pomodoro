@@ -15,8 +15,7 @@ export class UserData extends React.Component {
 
   renderResults() {
     if (this.props.loading) {
-      // return <Spinner spinnerName="circle" noFadeIn />;
-      return <div>loading sessions...</div>;
+      return <div className="loading-message">Loading Sessions...</div>;
     }
 
     if (this.props.error) {

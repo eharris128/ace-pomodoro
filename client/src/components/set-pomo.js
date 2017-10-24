@@ -43,7 +43,7 @@ export class SetPomo extends React.Component {
       const pomoIntervalId = setInterval(
       function() {
         // For live version: we want the condition set to 0
-        if (Math.abs(duration) === 57000) {
+        if (Math.abs(duration) === 0) {
           let elapsedTime = moment
             .utc(Math.abs(diffTime) - Math.abs(duration))
             .format('HH:mm:ss');
